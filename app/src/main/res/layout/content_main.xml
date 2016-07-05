@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.learn2basic.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:background="@color/button_material_light"
+    android:touchscreenBlocksFocus="false">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="78dp"
+        android:weightSum="1">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LINUX"
+            android:id="@+id/btn_main_linux"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0.08"
+            android:backgroundTint="@color/accent_material_dark"
+            />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HTML"
+            android:id="@+id/btn_main_html"
+            android:layout_weight="0.08"
+            android:backgroundTint="@color/accent_material_dark" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CSS"
+            android:id="@+id/btn_main_css"
+            android:layout_weight="0.08"
+            android:backgroundTint="@color/accent_material_dark"
+            android:layout_gravity="center_horizontal" />
+    </LinearLayout>
+
+</RelativeLayout>
