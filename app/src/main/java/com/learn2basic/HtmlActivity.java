@@ -1,17 +1,14 @@
 package com.learn2basic;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+import android.support.v7.app.AppCompatActivity;
 
-public class LinuxActivity extends AppCompatActivity {
+public class HtmlActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_linux);
+        setContentView(R.layout.activity_html);
     }
 }
 

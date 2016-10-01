@@ -47,8 +47,41 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        init();
+        // Linux Button
+        Button linuxButton = (Button) findViewById(R.id.btn_main_linux);
+        linuxButton.setOnClickListener(new View.OnClickListener()
 
+        {
+            @Override
+            public void onClick(View view) {
+                Intent linuxIntent = new Intent(MainActivity.this, LinuxActivity.class);
+                startActivity(linuxIntent);
+            }
+        });
+
+        //HTML Button
+        Button htmlButton = (Button) findViewById(R.id.btn_main_html);
+        htmlButton.setOnClickListener(new View.OnClickListener()
+
+        {
+            @Override
+            public void onClick(View view) {
+                Intent htmlIntent = new Intent(MainActivity.this, HtmlActivity.class);
+                startActivity(htmlIntent);
+            }
+        });
+
+        //CSS Button
+        Button cssButton = (Button) findViewById(R.id.btn_main_css);
+        cssButton.setOnClickListener(new View.OnClickListener()
+
+        {
+            @Override
+            public void onClick(View view) {
+                Intent cssIntent = new Intent(MainActivity.this, CssActivity.class);
+                startActivity(cssIntent);
+            }
+        });
     }
 
 
@@ -84,7 +117,7 @@ public class MainActivity extends AppCompatActivity
         return super.onOptionsItemSelected(item);
     }
 
-    
+
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
@@ -92,7 +125,6 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_linux) {
-
 
         } else if (id == R.id.nav_html) {
 
@@ -120,19 +152,6 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
-    }
-
-    public Button linuxButton;
-    public void init() {
-        linuxButton = (Button) findViewById(R.id.nav_linux);
-        linuxButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent openLinuxActivity = new Intent(MainActivity.this, LinuxActivity.class);
-                startActivity(openLinuxActivity);
-            }
-        });
     }
 
 }
